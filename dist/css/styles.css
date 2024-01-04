@@ -1,0 +1,236 @@
+/* Don't forget the fonts!! */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@300&display=swap');
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+
+.main__wrapper {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-family: 'Roboto';
+    letter-spacing: .35rem;
+}
+
+.search-field {
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+}
+
+.main__container {
+
+    max-width: 1080px;
+    gap: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.book-front {
+    height: 20rem;
+    width: 15rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-left: solid black 2px;
+}
+
+.book-front--title,
+.book-front--author {
+    margin-top: .875rem;
+    margin-left: .5rem;
+
+}
+
+.book-front--title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.book-front--author {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    margin-bottom: 1rem;
+}
+
+.book-modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000CC;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+
+.book-modal--infocontainer {
+    min-height: 50vh;
+    max-width: 50rem;
+    color: white;
+    background-color: #000000CC;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    line-height: 1.3125rem;
+
+}
+
+.left-container {
+    position: relative;
+}
+
+#svg-back {
+    display: none;
+    background-image: url(./png/icons8-double-left-52.png);
+    width: 2rem;
+    height: 2rem;
+    background-size: cover;
+    position: absolute;
+    top: -3rem;
+    background-color: transparent;
+
+
+}
+
+.left-container,
+.book-front {
+    height: 100%;
+    width: 100%;
+
+}
+
+.book-modal--infocontainer .book-front--title,
+.book-front--author {
+    margin: 0 0 1rem 1rem;
+
+
+}
+
+.book-modal--infocontainer .book-front--author {
+    margin: 0 0 2rem 1rem;
+}
+
+.book-modal--infocontainer .right-container {
+    padding: 1rem;
+    /* background-color: rgba(53, 52, 52, 0.822); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+
+.right-container> :nth-child(2) {
+    margin-bottom: auto;
+}
+
+.right-container> :nth-child(3),
+.right-container> :nth-child(4) {
+    margin-bottom: auto;
+}
+
+
+.book-modal--button {
+    width: 50%;
+    height: 2.5rem;
+    color: rgba(0, 0, 0, 0.80);
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    background-color: #EEE;
+    cursor: grab;
+}
+
+.left-container .book-front--title {
+    color: rgba(0, 0, 0, 0.80);
+    font-family: 'Roboto';
+    font-size: 2.375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.left-container .book-front--author {
+    color: rgba(0, 0, 0, 0.80);
+    font-family: 'Roboto';
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.right-container .book-front--title {
+    font-family: 'Roboto';
+    color: #FFF;
+    font-size: 2.375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+
+}
+
+.book-modal--infocontainer .book-plot {
+    color: rgba(255, 255, 255, 0.90);
+    font-family: 'Roboto';
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3125rem;
+
+
+}
+
+.special-keys-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+
+    background-color: rgba(196, 196, 196, 0.08);
+    border-radius: 0.125rem;
+    padding: .75rem;
+
+}
+
+.grid-item {
+    grid-column: span 2;
+}
+
+/* .right-container {}
+
+.left-container {
+    
+} */
+
+
+
+
+/* !If you do choose on of the more "convenient" ways, maybe you can use nth:child of infoContainer to manipulate content according to fon-sizes and so on 
+
+
+const correctColor = getComputedStyle(planetElement).getPropertyValue('background-color');*/
